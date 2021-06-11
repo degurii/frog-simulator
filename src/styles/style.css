@@ -1,0 +1,58 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.frogs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.frog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+.frog:hover {
+    cursor: pointer;
+}
+
+.frog.white {
+    border: 2px solid black;
+}
+
+.frog.black {
+    background-color: black;
+    color: white;
+}
+
+.log-box {
+
+}
+
+.undo {
+
+}
+
+.logs {
+
+}
