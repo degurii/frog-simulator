@@ -16,8 +16,6 @@ const events = {
 
         if (frog.id === null) return;
 
-        console.log(index);
-
         let moved = false;
         const isValidIndex = index => (0 <= index && index <= frogs.length - 1);
 
@@ -59,7 +57,7 @@ const render = () => {
 };
 
 window.addEventListener('DOMContentLoaded', event => {
-    state.numFrogs = 7;
+    state.numFrogs = 2;
     const frogs = [];
     for (let i = state.numFrogs; i > 0; i--) {
         frogs.push(createFrog(i, 'white'));

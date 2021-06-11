@@ -1,14 +1,15 @@
 const getFrogElement = frog => {
     const newFrog = document.createElement('div');
+    if(frog.id === null) {
+        newFrog.className = 'empty';
+        return newFrog;
+    }
 
     newFrog.className = 'frog';
-    if (frog.id !== null) {
-        newFrog.classList.add(frog.color);
-        newFrog.textContent = frog.id;
+    newFrog.classList.add(frog.color);
 
-        newFrog.dataset.id = frog.id;
-        newFrog.dataset.color = frog.color;
-    }
+    newFrog.dataset.id = frog.id;
+    newFrog.dataset.color = frog.color;
 
     return newFrog;
 };
@@ -16,11 +17,12 @@ const getFrogElement = frog => {
 const Frogs = (targetElement, {frogs}, events) => {
     const newFrogs = targetElement.cloneNode(true);
     newFrogs.innerHTML = '';
-    newFrogs.style.width = `${frogs.length * 6}rem`;
 
     frogs
         .map(getFrogElement)
         .forEach(elem => newFrogs.appendChild(elem));
+
+    newFrogs.style.width = `${frogs.length * 7.5}rem`;
 
     newFrogs.addEventListener('click', event => {
         const frogElement = event.target;
@@ -28,7 +30,7 @@ const Frogs = (targetElement, {frogs}, events) => {
             return (frog.id === +frogElement.dataset.id
                 && frog.color === frogElement.dataset.color);
         });
-        if(index === -1) return;
+        if (index === -1) return;
         events.moveFrog(index);
     });
     return newFrogs;
