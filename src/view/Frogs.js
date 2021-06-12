@@ -7,6 +7,7 @@ const getFrogElement = frog => {
 
     newFrog.className = 'frog';
     newFrog.classList.add(frog.color);
+    newFrog.textContent = frog.id;
 
     newFrog.dataset.id = frog.id;
     newFrog.dataset.color = frog.color;

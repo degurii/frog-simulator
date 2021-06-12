@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="src/styles/style.css">
 </head>
 <body>
-<div class="app">
-    <div class="frogs"></div>
-    <div class="log-box">
-        <div class="undo"></div>
-        <ul class="logs"></ul>
+    <form>
+        <label>개구리 수: </label>
+        <input min="1" max="10" type="number">
+        <button>초기화</button>
+    </form>
+    <div class="app">
+        <div class="frogs"></div>
+        <div class="undo">↩️</div>
+        <div class="logs"></div>
     </div>
-</div>
-<script type="module" src="src/index.js"></script>
+    <script type="module" src="src/index.js"></script>
 </body>
 </html>

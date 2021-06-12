@@ -5,6 +5,7 @@ html {
 body {
     margin: 0;
     font-size: 1.6rem;
+    padding: 1rem;
 }
 
 *, *::after, *::before {
@@ -14,6 +15,7 @@ body {
 .app {
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
 }
 
 .frogs {
@@ -28,6 +30,8 @@ body {
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
+    font-size: 3rem;
+    color: red;
 
     font-weight: bold;
     background-image: url("../../assets/pepe.png");
@@ -47,19 +51,25 @@ body {
 }
 
 .frog.black {
-    color: white;
     transform: scaleX(-1);
     background-color: black;
 }
 
-.log-box {
-
-}
-
 .undo {
-
+    font-size: 5rem;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+.undo:hover {
+    cursor: pointer;
 }
 
 .logs {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 8rem;
+    padding: 1rem;
 }
