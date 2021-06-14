@@ -7,7 +7,10 @@ const getFrogElement = frog => {
 
     newFrog.className = 'frog';
     newFrog.classList.add(frog.color);
-    newFrog.textContent = frog.id;
+
+    const $id = document.createElement('span');
+    $id.textContent = frog.id;
+    newFrog.appendChild($id);
 
     newFrog.dataset.id = frog.id;
     newFrog.dataset.color = frog.color;
@@ -26,7 +29,8 @@ const Frogs = (targetElement, {frogs}, events) => {
     newFrogs.style.width = `${frogs.length * 7.5}rem`;
 
     newFrogs.addEventListener('click', event => {
-        const frogElement = event.target;
+        const t = event.target;
+        const frogElement = t.tagName === 'SPAN' ? t.parentNode : t;
         const index = frogs.findIndex(frog => {
             return (frog.id === +frogElement.dataset.id
                 && frog.color === frogElement.dataset.color);

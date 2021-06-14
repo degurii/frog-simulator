@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-size: 1.6rem;
     padding: 1rem;
+
 }
 
 *, *::after, *::before {
@@ -21,6 +22,8 @@ body {
 .frogs {
     display: flex;
     justify-content: space-between;
+
+    user-select: none;
 }
 
 .frog {
@@ -31,13 +34,18 @@ body {
     height: 7rem;
     border-radius: 50%;
     font-size: 3rem;
-    color: red;
+    color: #fdfdfd;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 
     font-weight: bold;
     background-image: url("../../assets/pepe.png");
     background-size: 7rem 7rem;
-}
 
+
+}
+.frog.black span {
+    transform: scaleX(-1);
+}
 .empty {
     width: 7rem;
     height: 7rem;
