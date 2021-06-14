@@ -91,7 +91,6 @@ const init = () => {
     }
     frogs.push(createFrog(null, null));
     for (let i = 1; i < state.numFrogs + 1; i++) {
-
         frogs.push(createFrog(i, 'black'));
     }
     console.log(frogs);
